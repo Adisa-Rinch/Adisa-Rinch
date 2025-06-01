@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/calendar.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Календарь событий</title>
+</head>
+<body>
+    <header>
+        <h1>Семейные моменты</h1>
+        <p>Цифровой архив ваших самых дорогих воспоминаний</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/html/index.html">Главная</a></li>
+            <li><a href="/html/gallery.html">Галерея</a></li>
+            <li><a href="/html/tree.html">Семейное древо</a></li>
+            <li><a href="/html/calendar.html">Календарь</a></li>
+            <li><a href="/html/pers_acc.html">Личный кабинет</a></li>
+        </ul>
+    </nav>
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <div class="month-year-selector">
+                <select id="month-selector">
+                    <option value="0">Январь</option>
+                    <option value="1">Февраль</option>
+                    <option value="2">Март</option>
+                    <option value="3">Апрель</option>
+                    <option value="4">Май</option>
+                    <option value="5">Июнь</option>
+                    <option value="6">Июль</option>
+                    <option value="7">Август</option>
+                    <option value="8">Сентябрь</option>
+                    <option value="9">Октябрь</option>
+                    <option value="10">Ноябрь</option>
+                    <option value="11">Декабрь</option>
+                </select>
+                <select id="year-selector">
+                    <option value="2023">2023</option>
+                    <option value="2024" selected>2024</option>
+                    <option value="2025">2025</option>
+                </select>
+            </div>
+            <div class="calendar-nav">
+                <button id="prev-month"><</button>
+                <button id="next-month">></button>
+            </div>
+        </div>
+        <div class="calendar-weekdays">
+            <div>Пн</div>
+            <div>Вт</div>
+            <div>Ср</div>
+            <div>Чт</div>
+            <div>Пт</div>
+            <div>Сб</div>
+            <div>Вс</div>
+        </div>
+        <div class="calendar-days" id="calendar-days">
+            <!-- Пример статического календаря на январь 2024 -->
+            <div class="calendar-day other-month">
+                <div class="day-number">25</div>
+            </div>
+            <div class="calendar-day other-month">
+                <div class="day-number">26</div>
+            </div>
+            <div class="calendar-day other-month">
+                <div class="day-number">27</div>
+            </div>
+            <div class="calendar-day other-month">
+                <div class="day-number">28</div>
+            </div>
+            <div class="calendar-day other-month">
+                <div class="day-number">29</div>
+            </div>
+            <div class="calendar-day other-month">
+                <div class="day-number">30</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">31</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">1</div>
+                <div class="event">Новый год</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">2</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">3</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">4</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">5</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">6</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">7</div>
+                <div class="event">Рождество</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">8</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">9</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">10</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">11</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">12</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">13</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">14</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">15</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">16</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">17</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">18</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">19</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">20</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">21</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">22</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">23</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">24</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">25</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">26</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">27</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">28</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">29</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">30</div>
+            </div>
+            <div class="calendar-day">
+                <div class="day-number">31</div>
+            </div>
+            <div class="calendar-day other-month">
+                <div class="day-number">1</div>
+            </div>
+            <div class="calendar-day other-month">
+                <div class="day-number">2</div>
+            </div>
+            <div class="calendar-day other-month">
+                <div class="day-number">3</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Модальное окно добавления события (скрыто по умолчанию) -->
+    <div class="modal" id="add-event-modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Добавить событие</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form id="add-event-form">
+                <input type="hidden" id="event-date">
+                <div class="form-group">
+                    <label for="event-title">Название</label>
+                    <input type="text" id="event-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="event-description">Описание (необязательно)</label>
+                    <textarea id="event-description"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary close-modal">Отмена</button>
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Модальное окно просмотра событий дня (скрыто по умолчанию) -->
+    <div class="modal" id="day-events-modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="day-events-title">События 1 января</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="events-list" id="day-events-list">
+                <div class="event-item">
+                    <div class="event-info">
+                        <div style="font-weight: bold; margin-bottom: 5px;">Новый год</div>
+                    </div>
+                    <div class="event-actions">
+                        <button class="btn btn-danger">Удалить</button>
+                    </div>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="button" class="btn btn-secondary close-modal">Закрыть</button>
+                <button type="button" class="btn btn-primary" id="add-new-event">Добавить событие</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

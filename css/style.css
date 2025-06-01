@@ -85,6 +85,43 @@ footer {
     margin-top: 20px;
 }
 
+.albums {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.album {
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.album:hover {
+    transform: scale(1.05);
+}
+
+.album-cover {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.album-title {
+    text-align: center;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.album-photo-count {
+    text-align: center;
+    font-size: 0.8em;
+    color: #666;
+}
+
 .photo {
     position: relative;
     overflow: hidden;
@@ -119,7 +156,7 @@ footer {
     transform: translateY(0);
 }
 
-/* Адаптивность */ 
+/* Адаптивность */
 @media (max-width: 768px) {
     .features {
         flex-direction: column;
@@ -138,5 +175,3 @@ footer {
         margin: 5px 0;
     }
 }
-
-
