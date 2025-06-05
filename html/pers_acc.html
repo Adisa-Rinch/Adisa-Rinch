@@ -1,59 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Личный кабинет</title>
+    <link rel="stylesheet" href="/css/pers_acc.css">
+    <title>Личный кабинет | Семейные моменты</title>
 </head>
 
 <body>
-    <header>
-        <h1>Семейные моменты</h1>
-        <p>Цифровой архив ваших самых дорогих воспоминаний</p>
+    <header class="main-header">
+        <div class="header-background">
+            <img src="/images/1.jpg" alt="Семья 1" class="bg-image">
+            <img src="/images/2.jpg" alt="Семья 2" class="bg-image">
+            <img src="/images/3.jpg" alt="Семья 3" class="bg-image">
+            <img src="/images/4.jpg" alt="Семья 4" class="bg-image">
+            <img src="/images/5.jpg" alt="Семья 5" class="bg-image">
+            <img src="/images/6.jpg" alt="Семья 6" class="bg-image">
+        </div>
+        <div class="header-content">
+            <h1>Семейные моменты</h1>
+            <p>Цифровой архив ваших самых дорогих воспоминаний</p>
+        </div>
     </header>
-    <nav>
+    
+    <nav class="main-nav">
         <ul>
             <li><a href="/html/index.html">Главная</a></li>
             <li><a href="/html/gallery.html">Галерея</a></li>
             <li><a href="/html/tree.html">Семейное древо</a></li>
             <li><a href="/html/calendar.html">Календарь</a></li>
-            <li><a href="/html/pers_acc.html">Личный кабинет</a></li>
+            <li><a href="/html/pers_acc.html" class="active">Личный кабинет</a></li>
         </ul>
     </nav>
-    <h2>Личный кабинет</h2>
-    <div style="background-color: white; padding: 20px; border-radius: 8px;">
-        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-            <div style="flex: 1; min-width: 300px;">
-                <h3>Мой профиль</h3>
-                <form>
-                    <div style="margin-bottom: 15px;">
-                        <label style="display: block; margin-bottom: 5px;">Имя:</label>
-                        <input type="text"
-                            style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"
-                            value="Ваше имя">
+    
+    <main class="account-container">
+        <h2 class="section-title">Личный кабинет</h2>
+        
+        <section class="profile-section">
+            <div class="profile-card">
+                <h3 class="profile-title">Мой профиль</h3>
+                
+                <form class="profile-form" id="profileForm">
+                    <div class="form-group">
+                        <label for="firstName">Имя:</label>
+                        <input type="text" id="firstName" name="firstName" 
+                               placeholder="Введите ваше имя" value="Адиса" required>
                     </div>
-                    <div style="margin-bottom: 15px;">
-                        <label style="display: block; margin-bottom: 5px;">Фамилия:</label>
-                        <input type="text"
-                            style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"
-                            value="Ваша фамилия">
+                    
+                    <div class="form-group">
+                        <label for="lastName">Фамилия:</label>
+                        <input type="text" id="lastName" name="lastName" 
+                               placeholder="Введите вашу фамилию" value="Ринчиндоржиева" required>
                     </div>
-                    <div style="margin-bottom: 15px;">
-                        <label style="display: block; margin-bottom: 5px;">Email:</label>
-                        <input type="email"
-                            style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"
-                            value="Ваш email">
+                    
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" 
+                               placeholder="Введите ваш email" value="rinchindorzhiyeva04@mail.ru" required>
                     </div>
-                    <button type="submit"
-                        style="background-color: #4a6fa5; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Сохранить
-                        изменения</button>
+                    
+                    <div class="form-group">
+                        <label for="birthDate">Дата рождения:</label>
+                        <input type="date" id="birthDate" name="birthDate">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="familyRole">Роль в семье:</label>
+                        <select id="familyRole" name="familyRole">
+                            <option value="child">Ребёнок</option>
+                            <option value="parent">Родитель</option>
+                            <option value="grandparent">Бабушка/Дедушка</option>
+                            <option value="other" selected>Другое</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn-save">Сохранить изменения</button>
                 </form>
             </div>
-        </div>
-    </div>
-
+            
+            <div class="profile-card">
+                <h3 class="profile-title">Безопасность</h3>
+                
+                <form class="security-form" id="securityForm">
+                    <div class="form-group">
+                        <label for="currentPassword">Текущий пароль:</label>
+                        <input type="password" id="currentPassword" name="currentPassword" placeholder="Введите текущий пароль">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="newPassword">Новый пароль:</label>
+                        <input type="password" id="newPassword" name="newPassword" placeholder="Введите новый пароль">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirmPassword">Подтвердите пароль:</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Подтвердите новый пароль">
+                    </div>
+                    
+                    <button type="submit" class="btn-save">Изменить пароль</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="main-footer">
+        <p>&copy; 2023 Семейные моменты. Все права защищены.</p>
+        <p>Ринчиндоржиева Адиса Дугарнимаевна, группа 02171-ДБ</p>
+    </footer>
 </body>
 
 </html>

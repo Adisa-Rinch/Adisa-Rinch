@@ -1,31 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Семейное древо</title>
+    <link rel="stylesheet" href="/css/tree.css">
+    <title>Семейное древо | Семейные моменты</title>
 </head>
+
 <body>
-    <header>
-        <h1>Семейные моменты</h1>
-        <p>Цифровой архив ваших самых дорогих воспоминаний</p>
+    <header class="main-header">
+        <div class="header-background">
+            <img src="/images/1.jpg" alt="Семья 1" class="bg-image">
+            <img src="/images/2.jpg" alt="Семья 2" class="bg-image">
+            <img src="/images/3.jpg" alt="Семья 3" class="bg-image">
+            <img src="/images/4.jpg" alt="Семья 4" class="bg-image">
+            <img src="/images/5.jpg" alt="Семья 5" class="bg-image">
+            <img src="/images/6.jpg" alt="Семья 6" class="bg-image">
+        </div>
+        <div class="header-content">
+            <h1>Семейные моменты</h1>
+            <p>Цифровой архив ваших самых дорогих воспоминаний</p>
+        </div>
     </header>
-    <nav>
+    
+    <nav class="main-nav">
         <ul>
             <li><a href="/html/index.html">Главная</a></li>
             <li><a href="/html/gallery.html">Галерея</a></li>
-            <li><a href="/html/tree.html">Семейное древо</a></li>
+            <li><a href="/html/tree.html" class="active">Семейное древо</a></li>
             <li><a href="/html/calendar.html">Календарь</a></li>
             <li><a href="/html/pers_acc.html">Личный кабинет</a></li>
         </ul>
     </nav>
-    <h2>Семейное древо</h2>
-    <p>Визуализация ваших родственных связей</p>
-        <div style="background-color: white; padding: 20px; border-radius: 8px; text-align: center;">
-            <img src="/images/7.jpg" alt="Пример семейного древа" style="max-width: 100%; height: auto;">
-        <p>Добавляйте родственников и связывайте их с фотографиями в вашем архиве</p>
-    </div>
-
+    
+    <main class="tree-container">
+        <h2 class="section-title">Семейное древо</h2>
+        <p class="section-description">Визуализация ваших родственных связей</p>
+        
+        <div class="tree-wrapper">
+            <div class="tree-image-container">
+                <img src="/images/7.jpg" alt="Пример семейного древа" class="tree-image">
+                <p class="tree-instruction">Добавляйте родственников и связывайте их с фотографиями в вашем архиве</p>
+            </div>
+            
+            <div class="tree-controls">
+                <button class="tree-btn">Добавить члена семьи</button>
+                <button class="tree-btn">Редактировать связи</button>
+                <button class="tree-btn">Экспорт древа</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="main-footer">
+        <p>&copy; 2023 Семейные моменты. Все права защищены.</p>
+        <p>Ринчиндоржиева Адиса Дугарнимаевна, группа 02171-ДБ</p>
+    </footer>
 </body>
+
 </html>
