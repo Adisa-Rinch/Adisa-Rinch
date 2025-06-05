@@ -1,9 +1,12 @@
+/* Основные переменные */
 :root {
     --primary-color: #5f7161;
     --secondary-color: #6d8b74;
-    --light-bg: #bce8c2;
+    --accent-color: #d0b8a8;
+    --light-bg: #f8f9fa;
     --text-color: #333;
-    --white: #fff;
+    --light-text: #fff;
+    --border-color: #ddd;
     --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -12,16 +15,16 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: whitesmoke;
+    background-color: var(--light-bg);
     color: var(--text-color);
     line-height: 1.6;
 }
 
-/* Шапка сайта */
-header {
+/* Шапка */
+.main-header {
     position: relative;
     height: 400px;
-    color: var(--white);
+    color: var(--light-text);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -50,11 +53,11 @@ header {
     opacity: 0.7;
 }
 
-header:hover .bg-image {
+.main-header:hover .bg-image {
     opacity: 0.85;
 }
 
-header::before {
+.main-header::before {
     content: "";
     position: absolute;
     top: 0;
@@ -86,7 +89,7 @@ header::before {
 }
 
 /* Навигация */
-nav {
+.main-nav {
     background-color: var(--primary-color);
     padding: 12px 0;
     box-shadow: var(--shadow);
@@ -95,7 +98,7 @@ nav {
     z-index: 100;
 }
 
-nav ul {
+.main-nav ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -106,8 +109,8 @@ nav ul {
     padding: 0 20px;
 }
 
-nav a {
-    color: var(--white);
+.main-nav a {
+    color: var(--light-text);
     text-decoration: none;
     font-size: 1rem;
     padding: 6px 12px;
@@ -115,123 +118,138 @@ nav a {
     font-weight: 500;
 }
 
-nav a:hover {
+.main-nav a:hover {
     background-color: rgba(255, 255, 255, 0.15);
-    transform: translateY(-2px);
+}
+
+.main-nav .active {
+    background-color: rgba(255, 255, 255, 0.25);
+    font-weight: bold;
 }
 
 /* Основной контент */
-.container {
+.account-container {
     max-width: 1200px;
     margin: 30px auto;
     padding: 0 20px;
 }
 
-.hero {
-    background-color: var(--light-bg);
-    padding: 40px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.hero h2 {
-    margin-top: 0;
+.section-title {
+    font-size: 2rem;
     color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.hero p {
-    margin-bottom: 20px;
-    font-size: 1.1rem;
-}
-
-/* Кнопка */
-.hero button {
-    background-color: var(--primary-color);
-    color: var(--white);
-    border: none;
-    padding: 12px 24px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-.hero button:hover {
-    background-color: var(--secondary-color);
-}
-
-/* Особенности */
-.features {
+.profile-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
     margin-bottom: 40px;
 }
 
-.feature {
-    background-color: var(--white);
-    padding: 25px;
+.profile-card {
+    background-color: var(--light-text);
+    padding: 30px;
     border-radius: 8px;
     box-shadow: var(--shadow);
 }
 
-.feature h3 {
+.profile-title {
     color: var(--primary-color);
     margin-top: 0;
+    font-size: 1.5rem;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Формы */
+.profile-form,
+.security-form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(95, 113, 97, 0.2);
+}
+
+/* Кнопки */
+.btn-save {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.btn-save:hover {
+    background-color: var(--secondary-color);
+    box-shadow: var(--shadow);
 }
 
 /* Подвал */
-footer {
+.main-footer {
     background-color: var(--primary-color);
-    color: var(--white);
+    color: var(--light-text);
     text-align: center;
-    padding: 25px 0;
+    padding: 20px 0;
     margin-top: 50px;
 }
 
-footer p {
-    margin: 8px 0;
+.main-footer p {
+    margin: 5px 0;
     font-size: 0.9rem;
 }
 
 /* Адаптивность */
 @media (max-width: 768px) {
-    header {
-        height: 350px;
-    }
-    
-    .header-background {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .hero {
-        padding: 30px 20px;
-    }
-    
-    .features {
+    .profile-section {
         grid-template-columns: 1fr;
+    }
+    
+    .profile-card {
+        padding: 20px;
     }
 }
 
 @media (max-width: 480px) {
-    header {
-        height: 300px;
+    .header-content h1 {
+        font-size: 1.8rem;
     }
     
-    nav ul {
-        gap: 12px;
+    .section-title {
+        font-size: 1.5rem;
     }
     
-    nav a {
-        padding: 5px 8px;
-        font-size: 0.9rem;
-    }
-    
-    .hero {
-        padding: 25px 15px;
-    }
-    
-    .hero button {
-        padding: 10px 20px;
+    .main-nav ul {
+        flex-direction: column;
+        gap: 10px;
     }
 }

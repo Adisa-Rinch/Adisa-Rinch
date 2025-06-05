@@ -1,0 +1,92 @@
+/* Стили для страницы семейного древа */
+.tree-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.tree-wrapper {
+    background-color: var(--light-text);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.tree-image-container {
+    margin-bottom: 20px;
+}
+
+.tree-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.tree-instruction {
+    text-align: center;
+    color: var(--text-color);
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+.tree-controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.tree-btn {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .tree-wrapper {
+        padding: 20px;
+    }
+    
+    .tree-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tree-btn {
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .section-description {
+        font-size: 1rem;
+    }
+    
+    .tree-wrapper {
+        padding: 15px;
+    }
+}
